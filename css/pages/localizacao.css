@@ -1,0 +1,258 @@
+/* ========================================== */
+/* ====== 8. PÁGINA: LOCALIZAÇÃO (UNIFICADA) == */
+/* ========================================== */
+
+.location-hero {
+    background: radial-gradient(circle at center, #0d1b2a 0%, #060809 100%);
+    padding: 60px 0 120px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.breadcrumb-top {
+    color: #f7ce16;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.modern-title {
+    font-size: clamp(2rem, 5vw, 52px);
+    line-height: 1.2;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.title-divider {
+    width: 60px;
+    height: 4px;
+    background-color: #f7ce16;
+    margin: 20px auto;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: white;
+    max-width: 650px;
+    line-height: 1.6;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* --- CARDS DE DETALHES --- */
+.location-details-section {
+    padding: 0 0 0px;
+    background-color: #fcfcfc;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: -80px auto 0;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.detail-card {
+    background: white;
+    padding: 45px 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-top: 5px solid #f7ce16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.detail-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.detail-card i {
+    color: #ffffff;
+    font-size: 26px;
+    margin-bottom: 25px;
+    width: 65px;
+    height: 65px;
+    background: #f7ce16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.detail-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+/* --- SEÇÃO DO MAPA --- */
+.map-section {
+    padding-top: 20px !important;
+    margin-top: 0;
+    background-color: #fcfcfc;
+}
+
+.map-section h2.section-title {
+    text-align: center;
+    margin: 0 0 20px !important;
+    font-weight: 700;
+    font-size: 28px;
+    color: #0d1b2a;
+    text-transform: uppercase;
+}
+
+.map-container {
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+/* --- ANIMAÇÕES --- */
+.animate-fade-up,
+.animate-fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-fade-up.is-visible,
+.animate-fade.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
+.delay-4 {
+    transition-delay: 0.4s;
+}
+
+/* ========================================== */
+/* ========== RESPONSIVIDADE: LOCALIZAÇÃO === */
+/* ========================================== */
+
+@media (max-width: 992px) {
+    .location-hero {
+        padding: 80px 20px 100px;
+    }
+
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -50px;
+        gap: 20px;
+    }
+
+    /* Cards levemente menores no tablet */
+    .detail-card {
+        padding: 30px 20px;
+    }
+
+    .detail-card i {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .location-hero {
+        padding: 60px 20px 80px;
+    }
+
+    .modern-title {
+        font-size: 30px !important;
+    }
+
+    .map-section h2.section-title {
+        font-size: 22px;
+        margin: 10px 0 15px !important;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        padding: 15px 20px;
+        gap: 15px;
+        /* Reduz espaço entre os cards empilhados */
+    }
+
+    /* Cards bem mais compactos no mobile */
+    .detail-card {
+        transform: none !important;
+        padding: 20px 15px;
+        /* Padding reduzido */
+        border-radius: 12px;
+    }
+
+    .detail-card i {
+        width: 45px;
+        /* Ícone menor */
+        height: 45px;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .detail-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .detail-card p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .map-container iframe {
+        height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-title {
+        font-size: 24px !important;
+    }
+
+    .map-section h2.section-title {
+        font-size: 19px;
+    }
+
+    /* Ajuste fino para celulares bem pequenos */
+    .detail-card {
+        padding: 15px 10px;
+    }
+}

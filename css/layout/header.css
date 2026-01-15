@@ -1,0 +1,213 @@
+/* =============================== */
+/* ====== HEADER E NAV (RESP) ===== */
+/* =============================== */
+
+.header {
+    background: var(--secondary-color);
+    box-shadow: none;
+    position: relative;
+    /* <- era static */
+    width: 100%;
+    z-index: 9999;
+    /* <- garante ficar acima da página */
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    position: relative;
+    gap: 16px;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+.logo-text {
+    font-weight: 300;
+    color: var(--text-light);
+}
+
+/* Navegação (desktop) */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Links do menu */
+.header .nav a {
+    position: relative;
+    text-decoration: none;
+    color: var(--gray-light);
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px 0;
+    transition: color 0.25s ease;
+}
+
+.header .nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Link ativo */
+.header .nav a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.header .nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* Botão CTA (O Botão Amarelo) */
+.btn-primary {
+    background-color: #FFD700;
+    /* Amarelo Vibrante */
+    color: #000 !important;
+    /* Texto Preto para contraste */
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-2px);
+
+}
+
+.btn-primary i {
+    font-size: 16px;
+}
+
+/* Botão do menu (hamburger) */
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--gray-light);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Animação do hamburger virando X */
+.header.is-open .nav-toggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.header.is-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.is-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =============================== */
+/* ========== MOBILE ============= */
+/* =============================== */
+@media (max-width: 900px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Menu vira dropdown */
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--secondary-color);
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-6px);
+        pointer-events: none;
+        transition: all 0.3s ease;
+        padding: 0;
+    }
+
+    /* Quando o menu mobile abre */
+    .header.is-open .nav {
+        max-height: 80vh;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        padding: 10px 0;
+    }
+
+    .header .nav a {
+        padding: 14px 20px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header .nav a.active::after,
+    .header .nav a:hover::after {
+        display: none;
+        /* Remove a linha debaixo no mobile para ficar mais limpo */
+    }
+
+    /* Esconde o botão da barra principal no mobile */
+    .header-cta {
+        display: none;
+    }
+
+    /* Mostra o botão dentro do menu aberto no mobile */
+    .header.is-open .header-cta {
+        display: block;
+        margin: 15px 20px;
+    }
+
+    .header.is-open .btn-primary {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 15px;
+    }
+}

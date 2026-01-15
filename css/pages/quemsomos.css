@@ -1,0 +1,307 @@
+/* =========================================== */
+/* ====== PÁGINA: QUEM SOMOS (REFINADA) ======= */
+/* =========================================== */
+
+:root {
+    --primary-color: #f7ce16;
+    --secondary-color: #172739;
+    --deep-blue: #102131;
+    --white: #ffffff;
+    --gray-bg: #f8f9fa;
+    --text-muted: #666;
+}
+
+/* --- SEÇÃO HERO --- */
+.modern-hero {
+    background-color: var(--white);
+    padding: 100px 0 60px;
+}
+
+.hero-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-wrapper {
+    flex: 1.2;
+}
+
+.hero-image-side {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+/* Moldura da imagem */
+.hero-img-frame {
+    border-radius: 12px;
+    box-shadow: 8px 8px 0px var(--primary-color);
+    transition: all 0.4s ease;
+    max-width: 100%;
+}
+
+.breadcrumb-top {
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.modern-title {
+    font-size: clamp(32px, 5vw, 52px);
+    /* Responsivo */
+    line-height: 1.1;
+    color: var(--secondary-color);
+    font-weight: 800;
+}
+
+.modern-title span {
+    color: #555;
+    font-weight: 300;
+}
+
+.title-divider {
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 25px 0;
+}
+
+.hero-description {
+    font-size: clamp(16px, 2vw, 18px);
+    color: var(--text-muted);
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+/* --- SEÇÕES DE CONTEÚDO --- */
+.about-section {
+    padding: 80px 0;
+}
+
+.background-light {
+    background-color: var(--gray-bg);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: clamp(30px, 5vw, 70px);
+}
+
+.about-content>div {
+    flex: 1;
+}
+
+.section-heading {
+    font-size: clamp(24px, 4vw, 32px);
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #444;
+    font-size: 15px;
+}
+
+/* IMAGENS COM FRAME */
+.main-frame {
+    border-radius: 12px;
+    box-shadow: 10px 10px 0px var(--primary-color);
+    transition: all 0.4s ease;
+    display: inline-block;
+    width: 100%;
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* BOTÃO */
+.btn-modern {
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-modern:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* --- SEÇÃO MVV (MISSÃO, VISÃO, VALORES) --- */
+.about-mvv {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--deep-blue) 0%, #0a141d 100%);
+}
+
+.mvv-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.text-light {
+    color: var(--white);
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 700;
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mvv-item {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 40px 25px;
+    border-radius: 12px;
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.mvv-icon-wrapper {
+    width: 55px;
+    height: 55px;
+    border: 1px solid rgba(247, 206, 22, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.mvv-item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.mvv-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.value-modern-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.value-modern-list li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10px 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.value-modern-list li span {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+/* ========================================== */
+/* ========== RESPONSIVIDADE COMPLETA ======= */
+/* ========================================== */
+
+@media (max-width: 992px) {
+
+    .hero-layout,
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-divider {
+        margin: 20px auto;
+    }
+
+    .hero-image-side,
+    .about-image {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .mvv-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .modern-hero {
+        padding: 60px 0 40px;
+    }
+
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .reverse-mobile {
+        flex-direction: column-reverse;
+    }
+
+    .mvv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mvv-item {
+        padding: 30px 20px;
+    }
+
+    /* Reduz a moldura em telas menores para não pesar no visual */
+    .main-frame,
+    .hero-img-frame {
+        box-shadow: 6px 6px 0px var(--primary-color);
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-title {
+        font-size: 28px;
+    }
+
+    .section-heading {
+        font-size: 22px;
+    }
+
+    .btn-modern {
+        width: 100%;
+        padding: 14px 10px;
+        text-align: center;
+    }
+}

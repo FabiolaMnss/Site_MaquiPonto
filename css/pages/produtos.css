@@ -1,0 +1,374 @@
+/* =========================================== */
+/* ====== 6. PÁGINA: LISTAGEM DE PRODUTOS ====== */
+/* =========================================== */
+
+/* --- HERO SECTION PRODUTOS (CENTRALIZADO) --- */
+.product-hero {
+    background: radial-gradient(circle at center, #0d1b2a 0%, #060809 100%);
+    padding: 60px 20px;
+    /* Padding aumentado para respiro */
+    text-align: center;
+}
+
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.breadcrumb-top {
+    color: #f7ce16;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.modern-title {
+    font-size: clamp(32px, 5vw, 52px);
+    /* Título responsivo */
+    line-height: 1.1;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.modern-title span {
+    color: #f7ce16;
+    font-weight: 300;
+}
+
+.title-divider {
+    width: 60px;
+    height: 4px;
+    background-color: #f7ce16;
+    margin: 20px auto;
+}
+
+.hero-description {
+    font-size: clamp(16px, 2vw, 18px);
+    color: white;
+    max-width: 650px;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+/* Layout Principal e Grid */
+.product-listing-section {
+    padding: 60px 0 90px;
+    background-color: #f8f9fa;
+}
+
+.product-layout {
+    display: flex;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Evita que encoste nas bordas */
+}
+
+/* Sidebar */
+.sidebar-filters {
+    width: 280px;
+    flex-shrink: 0;
+    /* Impede a sidebar de encolher */
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+}
+
+.sidebar-filters h3 {
+    font-size: 20px;
+    color: #172739;
+    margin-bottom: 25px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.filter-group:last-child {
+    border: none;
+}
+
+.filter-group h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #999;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #444;
+    transition: 0.3s;
+}
+
+.filter-group label:hover {
+    color: #f7ce16;
+}
+
+/* Grid de Cards */
+.product-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    text-align: center;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: #f7ce16;
+}
+
+.product-image-container {
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.product-tag {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 6px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste para as plaquinhas ficarem todas laranja e chamativas */
+.product-tag {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 8px 15px;
+    /* Aumentei um pouco o tamanho */
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: 6px;
+    color: #fff;
+
+    background: #f39c12;
+    /* Laranja padrão */
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+/* Forçamos todas as variações a serem laranja agora */
+.primary-bg,
+.secondary-bg {
+    background: #f39c12 !important;
+}
+
+.product-card h3 {
+    font-size: clamp(18px, 3vw, 22px);
+    color: #172739;
+    margin-bottom: 10px;
+}
+
+.product-specs {
+    font-size: 12px;
+    color: #f7ce16;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #172739;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-link:hover {
+    background: #f7ce16;
+    color: #172739;
+}
+
+/* Botão Flutuante */
+.cta-flutuante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.cta-flutuante:hover {
+    transform: scale(1.05);
+}
+
+/* ========================================== */
+/* ========== RESPONSIVIDADE COMPLETA ======= */
+/* ========================================== */
+
+@media (max-width: 1024px) {
+    .product-layout {
+        flex-direction: column;
+        /* Sidebar vai para cima do grid */
+    }
+
+    .sidebar-filters {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sidebar-filters h3 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .filter-group {
+        flex: 1;
+        min-width: 200px;
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-hero {
+        padding: 40px 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+
+    .sidebar-filters {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .filter-group:last-child {
+        border: none;
+    }
+
+    .cta-flutuante {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-title {
+        font-size: 28px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        /* Um card por linha no celular pequeno */
+    }
+
+    .product-card {
+        padding: 20px;
+    }
+}
+
+/* --- ANIMAÇÕES --- */
+.hero-wrapper,
+.sidebar-filters,
+.product-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.is-visible {
+    opacity: 1 !important;
+    transform: translate(0) !important;
+}
+
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}

@@ -1,0 +1,211 @@
+/* ======================================= */
+/* ====== 10. RESPONSIVIDADE (MEDIA QUERIES) ====== */
+/* ======================================= */
+
+@media (max-width: 992px) {
+
+    /* Header */
+    .nav {
+        display: none;
+    }
+
+    .nav-content {
+        justify-content: space-between;
+    }
+
+    .btn-primary {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    /* Home/Geral */
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero {
+        height: 450px;
+        padding-top: 80px;
+    }
+
+    .pillars-content,
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    /* Contato */
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .contact-form,
+    .contact-info {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-row input {
+        margin-bottom: 20px !important;
+    }
+
+
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-text,
+    .about-image {
+        max-width: 100%;
+    }
+
+    .mvv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reverse-mobile {
+        flex-direction: column-reverse;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    /* Localização (Novo) */
+    .location-header {
+        padding: 80px 0 60px;
+    }
+
+    .location-header h1 {
+        font-size: 2.5em;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* Header */
+    .nav-content {
+        justify-content: space-between;
+    }
+
+    .btn-primary {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    /* Home/Geral */
+    .hero {
+        height: 350px;
+        align-items: flex-end;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding-left: 0;
+        max-width: 95%;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .pillars-content,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-item {
+        padding: 30px;
+    }
+
+    /* Contato */
+    .contact-info h2 {
+        font-size: 28px;
+    }
+
+    .phone-number {
+        font-size: 24px;
+    }
+
+    .contact-form,
+    .contact-info {
+        text-align: left;
+    }
+
+    .contact-info h2,
+    .contact-info p {
+        text-align: center;
+    }
+
+    .recaptcha-placeholder {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .recaptcha-placeholder label {
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-details {
+        margin-top: 15px;
+    }
+
+    /* Quem Somos */
+    .page-title {
+        font-size: 36px;
+    }
+
+    .about-section {
+        padding: 50px 0;
+    }
+
+    .about-section h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .about-text .btn-primary {
+        display: block;
+        width: 100%;
+    }
+
+    /* Localização (Novo) */
+    .location-header h1 {
+        font-size: 2em;
+    }
+
+    .google-map-embed {
+        height: 350px;
+    }
+}

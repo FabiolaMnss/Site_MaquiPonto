@@ -1,0 +1,75 @@
+/* ======================================= */
+/* ====== 1. VARIÁVEIS E BASE GLOBAL ====== */
+/* ======================================= */
+
+/* Variáveis CSS para Cores (Preto/Amarelo Profissional) */
+:root {
+    --primary-color: #dcc00b;
+    /* AMARELO FORTE - Destaque, Botões, Ícones */
+    --secondary-color: #172739;
+    /* PRETO/AZUL MUITO ESCURO - Header, Pilares, Rodapé */
+
+    /* Cores Neutras */
+    --text-dark: #333;
+    --text-light: #fff;
+    --background-light: #f9f9f9;
+    --background-dark: #121a24;
+    --card-background: #fff;
+    --gray-light: #eee;
+    --gray-medium: #666;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografia Base */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container de Conteúdo */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Links (global) */
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* Utilidades */
+.secondary-color-bg {
+    background-color: var(--secondary-color);
+}
+
+.text-light {
+    color: var(--text-light) !important;
+}
+
+/* Títulos de Seção */
+.section-title {
+    font-size: 34px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 17px;
+    color: var(--gray-medium);
+    margin-bottom: 60px;
+}

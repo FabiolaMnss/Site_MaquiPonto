@@ -1,0 +1,12 @@
+/* ======================================================
+   CSS organizado em pastas (geral + por página)
+   main.css importa tudo que é compartilhado entre as páginas.
+   Cada página HTML importa: main.css + css/pages/<pagina>.css
+   ====================================================== */
+
+@import url("./base/base.css");
+@import url("./layout/header.css");
+@import url("./utilities/animations.css");
+@import url("./components/contact.css");
+@import url("./layout/footer.css");
+@import url("./utilities/responsive.css");
