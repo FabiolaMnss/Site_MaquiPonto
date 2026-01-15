@@ -5,7 +5,7 @@
 /* ✅ RESET E VARIÁVEIS */
 :root {
     --primary-color: #f7ce16;
-    --secondary-color: #060809;
+    --secondary-color: #172739;
 }
 
 html,
@@ -97,7 +97,7 @@ body {
 
 .btn-primary-glow {
     background: var(--primary-color);
-    color: var(--secondary-color);
+    color: #060809;
     padding: 15px 35px;
     border-radius: 8px;
     font-weight: 700;
