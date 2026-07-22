@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serviços e Assistência Técnica - Maquiponto</title>
+  <meta name="description" content="Assistência técnica autorizada Henry e Secullum, calibração de balanças com credenciamento INMETRO, instalação e suporte em sistemas de ponto e acesso em Medianeira, PR.">
+  <link rel="icon" type="image/png" href="img/logo_EA.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/pages/servicos.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages/servicos.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -16,6 +18,13 @@
   <header class="header">
     <div class="container nav-content">
       <div class="logo">MAQUI <span class="logo-text">PONTO</span></div>
+
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <nav class="nav">
         <a href="index.html">INÍCIO</a>
         <a href="quemsomos.html">QUEM SOMOS</a>
@@ -24,6 +33,7 @@
         <a href="localizacao.html">LOCALIZAÇÃO</a>
         <a href="index.html#contato">CONTATO</a>
       </nav>
+
       <a href="https://wa.me/5545998608682?text=Olá! Estava visitando o site da Maquiponto e gostaria de falar com um responsável."
         class="btn-primary header-cta" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i> SOLICITE UM ORÇAMENTO
@@ -84,7 +94,7 @@
   </section>
 
   <section class="section-outro-modern">
-    <div class="outro-content">
+    <div class="container">
       <h3 class="animate-fade">Qualidade comprovada em <span class="text-gradient">cada detalhe</span></h3>
       <p class="animate-up delay-1">Atuamos conforme as normas vigentes, utilizando peças originais e tecnologia de
         ponta para assegurar a
@@ -98,15 +108,17 @@
   </section>
 
   <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-logo">MAQUI<span class="logo-text">PONTO</span></div>
-      <div class="footer-details">
-        <p>&copy; 2026 Maquiponto. Todos os direitos reservados.</p>
-        <p>Desenvolvido com Tecnologia e Precisão.</p>
-      </div>
-    </div>
-  </footer>
+        <div class="container footer-content">
+            <div class="footer-logo">MAQUI <span class="logo-text">PONTO</span></div>
+            <div class="footer-details">
+                <p>Rua Alagoas 2258 | Centro - Medianeira, PR</p>
+                <p>Credenciada INMETRO e Autorizada HENRY e SECULLUM.</p>
+                <p>Maquiponto © 2025 - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
+  <script src="js/script.js"></script>
   <script>
     const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {

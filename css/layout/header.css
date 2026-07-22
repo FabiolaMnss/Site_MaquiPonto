@@ -115,6 +115,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 6px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-toggle span {
@@ -123,26 +124,37 @@
     height: 2px;
     background: var(--gray-light);
     border-radius: 2px;
-    transition: transform 0.25s ease, opacity 0.25s ease;
+    transform-origin: center;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.25s ease,
+        width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Animação do hamburger virando X */
+.header.is-open .nav-toggle {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.06);
+}
+
 .header.is-open .nav-toggle span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
+    width: 20px;
 }
 
 .header.is-open .nav-toggle span:nth-child(2) {
     opacity: 0;
+    width: 0;
 }
 
 .header.is-open .nav-toggle span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+    width: 20px;
 }
 
 /* =============================== */
 /* ========== MOBILE ============= */
 /* =============================== */
-@media (max-width: 900px) {
+@media (max-width: 992px) {
     .logo {
         font-size: 20px;
     }

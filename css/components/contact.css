@@ -94,12 +94,15 @@
     background: var(--primary-color);
     color: var(--secondary-color);
     border: none;
-    padding: 15px 40px;
-    font-size: 16px;
-    border-radius: 3px;
+    padding: 12px 30px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
-    width: 100%;
+    width: auto;
+    align-self: flex-start;
+    transition: background-color 0.25s ease;
 }
 
 .btn-submit:hover {
@@ -226,6 +229,19 @@
 
 
 /* Media Query para Mobile */
+@media (max-width: 992px) {
+    .cta-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .cta-text {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .cta-duvidas {
         padding: 40px 15px;
@@ -237,6 +253,18 @@
 
     .cta-duvidas p {
         font-size: 1rem;
+    }
+
+    .cta-section {
+        padding: 40px 0;
+    }
+
+    .cta-text h2 {
+        font-size: 22px;
+    }
+
+    .cta-text p {
+        font-size: 15px;
     }
 }
 

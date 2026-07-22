@@ -26,12 +26,34 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 /* Tipografia Base */
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Evita que grids/flex "estourem" a largura da tela por causa do
+   min-width automático dos itens — causa raiz do scroll lateral */
+.services-grid>*,
+.product-grid>*,
+.mvv-grid>*,
+.details-grid>*,
+.service-grid>*,
+.pillars-content>*,
+.filter-group,
+.sidebar-filters,
+.hero-layout>*,
+.about-content>*,
+.contact-content>* {
+    min-width: 0;
 }
 
 /* Container de Conteúdo */
@@ -39,7 +61,14 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px 15px;
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 20px 16px;
+    }
 }
 
 /* Links (global) */

@@ -3,24 +3,41 @@
 /* =========================== */
 
 .footer {
-    background: var(--background-dark);
-    color: rgba(255, 255, 255, 0.7);
-    padding: 20px 0;
-    font-size: 13px;
+    background: var(--secondary-color);
+    color: rgba(255, 255, 255, 0.55);
+    padding: 25px 0;
+    font-size: 12.5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .footer-logo {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-logo .logo-text {
     color: var(--primary-color);
 }
 
 .footer-details p {
     margin-bottom: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 576px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
 }

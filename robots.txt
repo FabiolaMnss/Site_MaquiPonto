@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guileless-dodol-ccc480.netlify.app/sitemap.xml

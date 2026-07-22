@@ -4,7 +4,7 @@
 
 .hero {
     background: url('../../img/imagem1.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     height: 600px;
     display: flex;
     align-items: flex-start;
@@ -189,6 +189,9 @@
     font-weight: 700;
     margin-bottom: 8px;
     color: var(--secondary-color);
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .service-text p {
@@ -271,7 +274,36 @@
     }
 
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .service-item {
+        padding: 20px 16px;
+    }
+
+    .service-icon {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .service-text h4 {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .service-text p {
+        font-size: 12.5px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .service-text a {
+        font-size: 12px;
     }
 
     .contact-content {
@@ -298,11 +330,7 @@
 /* --- TELAS PEQUENAS (480px) --- */
 @media (max-width: 480px) {
     .hero-content h1 {
-        font-size: 28px;
-    }
-
-    .service-item {
-        padding: 25px 20px;
+        font-size: 26px;
     }
 
     .btn-secondary,
@@ -311,5 +339,23 @@
         display: block;
         text-align: center;
         box-sizing: border-box;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .pillar-card {
+        padding: 25px 15px;
+    }
+
+    .pillar-icon {
+        font-size: 36px;
+        margin-bottom: 15px;
     }
 }

@@ -55,7 +55,7 @@ body {
     position: relative;
     background: url('../../img/suporte-bg.jpg') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     padding: 140px 20px;
     text-align: center;
     color: white;
@@ -149,9 +149,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .modern-card {
@@ -316,22 +313,33 @@ body {
     }
 
     .service-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
     /* Cards mais compactos no Mobile */
     .modern-card {
-        padding: 35px 20px;
+        padding: 24px 16px;
     }
 
     .icon-box {
-        width: 55px;
-        height: 55px;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 15px;
     }
 
     .icon-box i {
-        font-size: 24px;
+        font-size: 20px;
+    }
+
+    .modern-card h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .modern-card p {
+        font-size: 12.5px;
+        line-height: 1.5;
     }
 
     /* Ajuste da Seção Dark no Mobile */

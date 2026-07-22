@@ -62,9 +62,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    max-width: 1200px;
     margin: -80px auto 0;
-    padding: 0 20px;
     position: relative;
     z-index: 10;
 }
@@ -75,11 +73,24 @@
     border-radius: 16px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-top: 5px solid #f7ce16;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Faixa superior como pseudo-elemento (evita o "casulo" que o
+   border-top + border-radius juntos causavam visualmente) */
+.detail-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #f7ce16;
 }
 
 .detail-card:hover {
@@ -171,9 +182,25 @@
     }
 
     .details-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         margin-top: -50px;
         gap: 20px;
+    }
+
+    /* Endereço e Fale Conosco lado a lado; Horário ocupa a linha toda embaixo */
+    .detail-card:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .detail-card:nth-child(3) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .detail-card:nth-child(2) {
+        grid-column: 1 / -1;
+        grid-row: 2;
     }
 
     /* Cards levemente menores no tablet */
@@ -204,37 +231,35 @@
     }
 
     .details-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         margin-top: 0;
         padding: 15px 20px;
-        gap: 15px;
-        /* Reduz espaço entre os cards empilhados */
+        gap: 14px;
     }
 
     /* Cards bem mais compactos no mobile */
     .detail-card {
         transform: none !important;
-        padding: 20px 15px;
-        /* Padding reduzido */
+        padding: 18px 12px;
         border-radius: 12px;
     }
 
     .detail-card i {
-        width: 45px;
-        /* Ícone menor */
-        height: 45px;
-        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
         margin-bottom: 10px;
     }
 
     .detail-card h4 {
-        font-size: 1.1rem;
-        margin-bottom: 8px;
+        font-size: 1rem;
+        margin-bottom: 6px;
     }
 
-    .detail-card p {
-        font-size: 14px;
-        line-height: 1.4;
+    .detail-card p,
+    .detail-card a {
+        font-size: 12.5px;
+        line-height: 1.45;
     }
 
     .map-container iframe {

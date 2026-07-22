@@ -4,31 +4,17 @@
 
 @media (max-width: 992px) {
 
-    /* Header */
-    .nav {
-        display: none;
+    /* Títulos de seção */
+    .section-title {
+        font-size: 28px;
     }
 
-    .nav-content {
-        justify-content: space-between;
+    .section-subtitle {
+        font-size: 15px;
+        margin-bottom: 40px;
     }
 
-    .btn-primary {
-        padding: 8px 15px;
-        font-size: 12px;
-    }
-
-    /* Home/Geral */
-    .hero-content h1 {
-        font-size: 40px;
-    }
-
-    .hero {
-        height: 450px;
-        padding-top: 80px;
-    }
-
-    .pillars-content,
+    /* Services grid */
     .services-grid {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -57,30 +43,23 @@
         margin-bottom: 20px !important;
     }
 
-
-    .about-content {
+    /* CTA section */
+    .cta-content {
         flex-direction: column;
-        gap: 30px;
+        text-align: center;
+        gap: 20px;
     }
 
-    .about-text,
-    .about-image {
+    .cta-text {
         max-width: 100%;
-    }
-
-    .mvv-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .reverse-mobile {
-        flex-direction: column-reverse;
-    }
-
-    .about-text {
         text-align: center;
     }
 
-    /* Localização (Novo) */
+    .cta-text h2 {
+        font-size: 24px;
+    }
+
+    /* Localização */
     .location-header {
         padding: 80px 0 60px;
     }
@@ -94,56 +73,43 @@
     }
 }
 
+@media (max-width: 768px) {
+
+    /* Contato - info centralizada */
+    .contact-info h2,
+    .contact-info p {
+        text-align: center;
+    }
+
+    .contact-info .contact-item {
+        justify-content: center;
+    }
+}
+
 @media (max-width: 576px) {
 
     /* Header */
-    .nav-content {
-        justify-content: space-between;
-    }
-
-    .btn-primary {
-        display: block;
-        margin-left: 10px;
-    }
-
     .logo {
         margin-right: auto;
     }
 
-    /* Home/Geral */
-    .hero {
-        height: 350px;
-        align-items: flex-end;
-        padding-top: 50px;
-        padding-bottom: 50px;
+    /* Títulos */
+    .section-title {
+        font-size: 24px;
     }
 
-    .hero-content {
-        text-align: center;
-        padding-left: 0;
-        max-width: 95%;
-    }
-
-    .hero-content h1 {
-        font-size: 30px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
-
-    .pillars-content,
+    /* Services */
     .services-grid {
         grid-template-columns: 1fr;
     }
 
     .service-item {
-        padding: 30px;
+        padding: 25px 20px;
     }
 
     /* Contato */
     .contact-info h2 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .phone-number {
@@ -175,15 +141,16 @@
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: 12px;
     }
 
     .footer-details {
-        margin-top: 15px;
+        margin-top: 0;
     }
 
     /* Quem Somos */
     .page-title {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .about-section {
@@ -191,7 +158,7 @@
     }
 
     .about-section h2 {
-        font-size: 24px;
+        font-size: 22px;
         text-align: center;
     }
 
@@ -200,12 +167,19 @@
         width: 100%;
     }
 
-    /* Localização (Novo) */
+    /* CTA */
+    .btn-primary-inverted {
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+    }
+
+    /* Localização */
     .location-header h1 {
         font-size: 2em;
     }
 
     .google-map-embed {
-        height: 350px;
+        height: 300px;
     }
 }
