@@ -238,3 +238,34 @@
         padding: 15px;
     }
 }
+
+/* Telas bem estreitas: aperta o essencial pra nada vazar da tela */
+@media (max-width: 420px) {
+    .header .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .nav-content {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .nav-toggle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .admin-panel-header .admin-toggle-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
+    }
+}

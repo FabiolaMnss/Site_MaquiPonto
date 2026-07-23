@@ -105,6 +105,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
+    text-align: center;
     transition: all 0.3s ease;
 
 }
