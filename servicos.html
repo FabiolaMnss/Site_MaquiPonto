@@ -11,47 +11,107 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/pages/servicos.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/components/admin.css">
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="container nav-content">
-      <div class="logo">MAQUI <span class="logo-text">PONTO</span></div>
-
-      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="nav">
-        <a href="index.html">INÍCIO</a>
-        <a href="quemsomos.html">QUEM SOMOS</a>
-        <a href="produtos-geral.html">PRODUTOS</a>
-        <a href="servicos.html" class="active">SERVIÇOS</a>
-        <a href="localizacao.html">LOCALIZAÇÃO</a>
-        <a href="index.html#contato">CONTATO</a>
-      </nav>
-
-      <a href="https://wa.me/5545998608682?text=Olá! Estava visitando o site da Maquiponto e gostaria de falar com um responsável."
-        class="btn-primary header-cta" target="_blank" rel="noopener">
-        <i class="fab fa-whatsapp"></i> SOLICITE UM ORÇAMENTO
-      </a>
-    </div>
-  </header>
+  <div id="site-header"></div>
 
   <section class="support-section">
     <div class="container">
-      <h2 class="reveal-text animate-up">Precisando de Suporte Técnico?</h2>
-      <p class="animate-up delay-1">Nossa equipe de especialistas está pronta para auxiliar sua empresa na
-        <strong>configuração de softwares de
-          ponto, tratamento de dados e manutenção de equipamentos</strong>.
-        Garantimos que seu sistema de registro esteja sempre operando dentro das normas do Ministério do Trabalho,
-        evitando erros e otimizando o fechamento da sua folha de pagamento.
-      </p>
+      <h2 class="reveal-text animate-up" data-edit-key="support.title" data-edit-max="60">Precisando de Suporte
+        Técnico?</h2>
+      <p class="animate-up delay-1" data-edit-key="support.description" data-edit-max="420">Nossa equipe de
+        especialistas está pronta para auxiliar sua empresa na configuração de softwares de ponto, tratamento de
+        dados e manutenção de equipamentos. Garantimos que seu sistema de registro esteja sempre operando dentro das
+        normas do Ministério do Trabalho, evitando erros e otimizando o fechamento da sua folha de pagamento.</p>
       <a href="https://wa.me/5545998608682" class="btn-primary-glow btn-margin-top animate-up delay-2"
-        target="_blank">Falar com um Técnico Agora</a>
+        target="_blank" data-edit-key="support.cta" data-edit-max="40">Falar com um Técnico Agora</a>
+    </div>
+  </section>
+
+  <section class="feature-highlights-section">
+    <div class="container">
+      <h2 class="feature-title animate-up">
+        <span data-edit-key="features.titleLine1" data-edit-max="40">Suporte técnico completo,</span>
+        <span class="highlight" data-edit-key="features.titleHighlight" data-edit-max="40">do diagnóstico à
+          garantia</span>
+      </h2>
+
+      <div class="feature-row animate-up delay-1">
+        <div class="feature-item is-active">
+          <div class="feature-icon"><i class="fas fa-magnifying-glass"></i></div>
+          <span data-edit-key="features.item1" data-edit-max="30">Diagnóstico Rápido</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+          <span data-edit-key="features.item2" data-edit-max="30">Peças Originais</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span data-edit-key="features.item3" data-edit-max="30">Atendimento Local</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-user-check"></i></div>
+          <span data-edit-key="features.item4" data-edit-max="30">Técnicos Certificados</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-headset"></i></div>
+          <span data-edit-key="features.item5" data-edit-max="30">Suporte Henry/Secullum</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+          <span data-edit-key="features.item6" data-edit-max="30">Garantia de Serviço</span>
+        </div>
+      </div>
+
+      <div class="feature-checklist-grid">
+        <div class="checklist-column animate-up delay-2">
+          <ul class="checklist-list">
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <strong data-edit-key="features.check1Strong" data-edit-max="40">Diagnóstico completo</strong>
+                <span data-edit-key="features.check1Rest" data-edit-max="120"> do equipamento antes de qualquer
+                  orçamento, sem custo escondido.</span>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <strong data-edit-key="features.check2Strong" data-edit-max="40">Peças 100% originais</strong>
+                <span data-edit-key="features.check2Rest" data-edit-max="120">, com procedência garantida e
+                  compatibilidade certificada.</span>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <strong data-edit-key="features.check3Strong" data-edit-max="40">Atendimento presencial</strong>
+                <span data-edit-key="features.check3Rest" data-edit-max="120"> em Medianeira e região, sem enviar
+                  seu equipamento pra longe.</span>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <strong data-edit-key="features.check4Strong" data-edit-max="40">Garantia por escrito</strong>
+                <span data-edit-key="features.check4Rest" data-edit-max="120"> em todo serviço realizado, com prazo
+                  e cobertura claros.</span>
+              </div>
+            </li>
+          </ul>
+          <a href="https://wa.me/5545998608682?text=Olá! Quero saber mais sobre o suporte técnico da Maquiponto."
+            class="btn-primary-glow" target="_blank" data-edit-key="features.cta" data-edit-max="30">QUERO
+            CONHECER</a>
+        </div>
+
+        <div class="checklist-image animate-up delay-3">
+          <img src="img/imagem_quemsomos1.jpeg" alt="Técnicos Maquiponto realizando manutenção"
+            class="img-responsive">
+        </div>
+      </div>
     </div>
   </section>
 
@@ -59,34 +119,41 @@
     <div class="container">
 
       <div class="section-intro animate-fade">
-        <span class="accent-text">CONHEÇA NOSSAS</span>
-        <h2 class="modern-title">SOLUÇÕES SOB <span class="highlight">MEDIDA</span></h2>
+        <span class="accent-text" data-edit-key="servicos.eyebrow" data-edit-max="30">CONHEÇA NOSSAS</span>
+        <h2 class="modern-title">
+          <span data-edit-key="servicos.titleLine1" data-edit-max="30">SOLUÇÕES SOB</span>
+          <span class="highlight" data-edit-key="servicos.titleHighlight" data-edit-max="20">MEDIDA</span>
+        </h2>
         <div class="title-underline"></div>
       </div>
 
       <div class="service-grid">
         <div class="service-card modern-card animate-up delay-1">
           <div class="icon-box"><i class="fas fa-balance-scale"></i></div>
-          <h3>Manutenção em Balanças</h3>
-          <p>Reparos e ajustes completos para garantir o desempenho ideal das suas balanças comerciais.</p>
+          <h3 data-edit-key="servicos.card1Title" data-edit-max="40">Manutenção em Balanças</h3>
+          <p data-edit-key="servicos.card1Desc" data-edit-max="140">Reparos e ajustes completos para garantir o
+            desempenho ideal das suas balanças comerciais.</p>
         </div>
 
         <div class="service-card modern-card animate-up delay-2">
           <div class="icon-box"><i class="fas fa-clock"></i></div>
-          <h3>Relógios de Ponto</h3>
-          <p>Assistência técnica especializada, diagnóstico rápido e atualização de firmware.</p>
+          <h3 data-edit-key="servicos.card2Title" data-edit-max="40">Relógios de Ponto</h3>
+          <p data-edit-key="servicos.card2Desc" data-edit-max="140">Assistência técnica especializada, diagnóstico
+            rápido e atualização de firmware.</p>
         </div>
 
         <div class="service-card modern-card animate-up delay-3">
           <div class="icon-box"><i class="fas fa-gauge-high"></i></div>
-          <h3>Calibragem</h3>
-          <p>Serviço com certificado e rastreabilidade, garantindo total conformidade técnica.</p>
+          <h3 data-edit-key="servicos.card3Title" data-edit-max="40">Calibragem</h3>
+          <p data-edit-key="servicos.card3Desc" data-edit-max="140">Serviço com certificado e rastreabilidade,
+            garantindo total conformidade técnica.</p>
         </div>
 
         <div class="service-card modern-card animate-up delay-4">
           <div class="icon-box"><i class="fas fa-tools"></i></div>
-          <h3>Instalação</h3>
-          <p>Montagem e configuração de novos equipamentos diretamente no seu estabelecimento.</p>
+          <h3 data-edit-key="servicos.card4Title" data-edit-max="40">Instalação</h3>
+          <p data-edit-key="servicos.card4Desc" data-edit-max="140">Montagem e configuração de novos equipamentos
+            diretamente no seu estabelecimento.</p>
         </div>
       </div>
 
@@ -95,14 +162,20 @@
 
   <section class="section-outro-modern">
     <div class="container">
-      <h3 class="animate-fade">Qualidade comprovada em <span class="text-gradient">cada detalhe</span></h3>
-      <p class="animate-up delay-1">Atuamos conforme as normas vigentes, utilizando peças originais e tecnologia de
-        ponta para assegurar a
-        longevidade do seu patrimônio.</p>
+      <h3 class="animate-fade">
+        <span data-edit-key="outro.titleLine1" data-edit-max="40">Qualidade comprovada em</span>
+        <span class="text-gradient" data-edit-key="outro.titleHighlight" data-edit-max="30">cada detalhe</span>
+      </h3>
+      <p class="animate-up delay-1" data-edit-key="outro.description" data-edit-max="220">Atuamos conforme as normas
+        vigentes, utilizando peças originais e tecnologia de ponta para assegurar a longevidade do seu patrimônio.
+      </p>
       <div class="tech-lines animate-up delay-2">
-        <span><i class="fas fa-check-circle"></i> Peças Originais</span>
-        <span><i class="fas fa-check-circle"></i> Técnicos Certificados</span>
-        <span><i class="fas fa-check-circle"></i> Garantia de Serviço</span>
+        <span><i class="fas fa-check-circle"></i> <span data-edit-key="outro.tech1" data-edit-max="30">Peças
+            Originais</span></span>
+        <span><i class="fas fa-check-circle"></i> <span data-edit-key="outro.tech2" data-edit-max="30">Técnicos
+            Certificados</span></span>
+        <span><i class="fas fa-check-circle"></i> <span data-edit-key="outro.tech3" data-edit-max="30">Garantia de
+            Serviço</span></span>
       </div>
     </div>
   </section>
@@ -132,6 +205,8 @@
     document.querySelectorAll('.animate-up, .animate-fade').forEach((el) => observer.observe(el));
   </script>
 
+  <script type="module" src="js/header.js"></script>
+  <script type="module" src="js/editable-content.js"></script>
 </body>
 
 </html>

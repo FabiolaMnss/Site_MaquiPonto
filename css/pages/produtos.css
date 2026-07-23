@@ -36,7 +36,12 @@
     margin-bottom: 10px;
 }
 
-.modern-title span {
+#hero-title-line1 {
+    color: #fff;
+    font-weight: 800;
+}
+
+#hero-title-line2 {
     color: #f7ce16;
     font-weight: 300;
 }
@@ -129,6 +134,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
+    /* Impede que o grid "estique" a altura dos cards pra combinar com a
+       linha - cada card mantém sempre o próprio tamanho natural */
+    align-items: start;
 }
 
 .product-card {

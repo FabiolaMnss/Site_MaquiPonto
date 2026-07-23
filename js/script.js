@@ -25,19 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
         animatedElements.forEach((el) => observer.observe(el));
     }
 
-    // =====================================
-    // 2) MENU RESPONSIVO (Mobile)
-    // =====================================
-    const header = document.querySelector(".header");
-    const navBtn = document.querySelector(".nav-toggle");
-    if (navBtn) {
-        navBtn.addEventListener("click", () => {
-            header.classList.toggle("is-open");
-            // Ajuste opcional para acessibilidade
-            const expanded = header.classList.contains("is-open");
-            navBtn.setAttribute("aria-expanded", expanded);
-        });
-    }
+    // Obs: o menu mobile (hamburguer) agora é controlado pelo js/header.js,
+    // já que o cabeçalho é injetado globalmente por ele.
 
     // ===============================================
     // 3) FILTRO DE PRODUTOS

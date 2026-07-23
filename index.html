@@ -10,47 +10,24 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/components/admin.css">
 </head>
 
 <body class="home-page">
 
-    <header class="header">
-        <div class="container nav-content">
-            <a href="index.html" class="logo" aria-label="Maquiponto - Início">
-                MAQUI <span class="logo-text">PONTO</span>
-            </a>
-
-            <!-- Botão do menu (aparece só no mobile) -->
-            <button class="nav-toggle" aria-label="Abrir menu" aria-controls="primary-nav" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <nav class="nav" id="primary-nav">
-                <a href="index.html" class="active">INÍCIO</a>
-                <a href="quemsomos.html">QUEM SOMOS</a>
-                <a href="produtos-geral.html">PRODUTOS</a>
-                <a href="servicos.html">SERVIÇOS</a>
-                <a href="localizacao.html">LOCALIZAÇÃO</a>
-                <a href="#contato">CONTATO</a>
-            </nav>
-
-            <a href="https://wa.me/5545998608682?text=Olá! Estava visitando o site da Maquiponto e gostaria de falar com um responsável."
-                class="btn-primary header-cta" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i> SOLICITE UM ORÇAMENTO
-            </a>
-        </div>
-    </header>
+    <div id="site-header"></div>
 
     <section class="hero" id="inicio">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1 class="animate-up">A sua solução em Controle de Ponto e Balanças!</h1>
-            <p class="animate-up delay-1">Desde 2010, somos a sua parceira autorizada Henry e Secullum, oferecendo
-                tecnologia de ponta, assistência técnica especializada e total suporte na gestão de ponto e acesso.</p>
-            <a href="#produtos" class="btn-secondary animate-up delay-2">VER PRODUTOS</a>
+            <h1 class="animate-up" data-edit-key="hero.title" data-edit-max="70">A sua solução em Controle de Ponto e
+                Balanças!</h1>
+            <p class="animate-up delay-1" data-edit-key="hero.subtitle" data-edit-max="260">Desde 2010, somos a sua
+                parceira autorizada Henry e Secullum, oferecendo tecnologia de ponta, assistência técnica
+                especializada e total suporte na gestão de ponto e acesso.</p>
+            <a href="#produtos" class="btn-secondary animate-up delay-2" data-edit-key="hero.cta"
+                data-edit-max="30">VER PRODUTOS</a>
         </div>
     </section>
 
@@ -58,91 +35,104 @@
         <div class="container pillars-content">
             <div class="pillar-card animate-fade">
                 <i class="fas fa-certificate pillar-icon"></i>
-                <h3>REVENDEDOR AUTORIZADO</h3>
-                <p>Oferecemos apenas produtos certificados e de alta qualidade das melhores marcas do mercado, como
-                    Henry e Secullum.</p>
+                <h3 data-edit-key="pillars.card1Title" data-edit-max="40">REVENDEDOR AUTORIZADO</h3>
+                <p data-edit-key="pillars.card1Desc" data-edit-max="160">Oferecemos apenas produtos certificados e de
+                    alta qualidade das melhores marcas do mercado, como Henry e Secullum.</p>
             </div>
             <div class="pillar-card animate-fade delay-4">
                 <i class="fas fa-tools pillar-icon"></i>
-                <h3>ASSISTÊNCIA TÉCNICA</h3>
-                <p>Credenciados pelo INMETRO para serviços em balanças e autorizados Henry, garantindo manutenção e
-                    calibração com excelência.</p>
+                <h3 data-edit-key="pillars.card2Title" data-edit-max="40">ASSISTÊNCIA TÉCNICA</h3>
+                <p data-edit-key="pillars.card2Desc" data-edit-max="160">Credenciados pelo INMETRO para serviços em
+                    balanças e autorizados Henry, garantindo manutenção e calibração com excelência.</p>
             </div>
             <div class="pillar-card animate-fade delay-4">
                 <i class="fas fa-headset pillar-icon"></i>
-                <h3>SUPORTE ESPECIALIZADO</h3>
-                <p>Total suporte na instalação, treinamento e configuração de sistemas de controle de ponto e acesso,
-                    para o uso ideal dos seus equipamentos.</p>
+                <h3 data-edit-key="pillars.card3Title" data-edit-max="40">SUPORTE ESPECIALIZADO</h3>
+                <p data-edit-key="pillars.card3Desc" data-edit-max="160">Total suporte na instalação, treinamento e
+                    configuração de sistemas de controle de ponto e acesso, para o uso ideal dos seus equipamentos.
+                </p>
             </div>
         </div>
     </section>
 
     <section class="services-section" id="servicos">
         <div class="container">
-            <h2 class="section-title animate-up">NOSSOS SERVIÇOS & PRODUTOS</h2>
-            <p class="section-subtitle animate-up delay-1">Soluções completas para gestão da sua empresa</p>
+            <h2 class="section-title animate-up" data-edit-key="services.title" data-edit-max="50">NOSSOS SERVIÇOS
+                & PRODUTOS</h2>
+            <p class="section-subtitle animate-up delay-1" data-edit-key="services.subtitle" data-edit-max="80">
+                Soluções completas para gestão da sua empresa</p>
 
             <div class="services-grid">
 
                 <div class="service-item animate-fade-left" id="produtos">
                     <i class="fas fa-fingerprint service-icon"></i>
                     <div class="service-text">
-                        <h4>Relógios Ponto Biométricos/Cartográficos</h4>
-                        <p>Venda e instalação de toda a linha de Relógios Ponto Eletrônicos (REP) e cartográficos, em
-                            conformidade com a legislação.</p>
-                        <a href="produtos-geral.html?filtro=relogio">ver modelos <i
-                                class="fas fa-chevron-right"></i></a>
+                        <h4 data-edit-key="services.item1Title" data-edit-max="50">Relógios Ponto
+                            Biométricos/Cartográficos</h4>
+                        <p data-edit-key="services.item1Desc" data-edit-max="160">Venda e instalação de toda a linha
+                            de Relógios Ponto Eletrônicos (REP) e cartográficos, em conformidade com a legislação.</p>
+                        <a href="produtos-geral.html?filtro=relogio"><span data-edit-key="services.item1Link"
+                                data-edit-max="20">ver modelos</span> <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
 
                 <div class="service-item animate-fade-left delay-1">
                     <i class="fas fa-weight-hanging service-icon"></i>
                     <div class="service-text">
-                        <h4>Balanças Comerciais</h4>
-                        <p>Modelos de balanças comerciais e industriais, com diferentes capacidades e tecnologias, das
-                            principais marcas do mercado.</p>
-                        <a href="produtos-geral.html?filtro=balanca">ver modelos <i
-                                class="fas fa-chevron-right"></i></a>
+                        <h4 data-edit-key="services.item2Title" data-edit-max="50">Balanças Comerciais</h4>
+                        <p data-edit-key="services.item2Desc" data-edit-max="160">Modelos de balanças comerciais e
+                            industriais, com diferentes capacidades e tecnologias, das principais marcas do mercado.
+                        </p>
+                        <a href="produtos-geral.html?filtro=balanca"><span data-edit-key="services.item2Link"
+                                data-edit-max="20">ver modelos</span> <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
 
                 <div class="service-item animate-fade-left delay-2">
                     <i class="fas fa-screwdriver-wrench service-icon"></i>
                     <div class="service-text">
-                        <h4>Assistência Técnica Autorizada</h4>
-                        <p>Serviços de manutenção em produtos Henry e calibração de balanças, com o credenciamento e
-                            qualidade que você confia.</p>
-                        <a href="servicos.html">saiba mais <i class="fas fa-chevron-right"></i></a>
+                        <h4 data-edit-key="services.item3Title" data-edit-max="50">Assistência Técnica Autorizada</h4>
+                        <p data-edit-key="services.item3Desc" data-edit-max="160">Serviços de manutenção em produtos
+                            Henry e calibração de balanças, com o credenciamento e qualidade que você confia.</p>
+                        <a href="servicos.html"><span data-edit-key="services.item3Link" data-edit-max="20">saiba
+                                mais</span> <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
 
                 <div class="service-item animate-fade-left">
                     <i class="fas fa-desktop service-icon"></i>
                     <div class="service-text">
-                        <h4>Sistemas de Ponto e Acesso (Secullum)</h4>
-                        <p>Instalação, treinamento e suporte em softwares para gestão de ponto e controle de acesso,
-                            otimizando o RH da sua empresa.</p>
-                        <a href="servicos.html">saiba mais <i class="fas fa-chevron-right"></i></a>
+                        <h4 data-edit-key="services.item4Title" data-edit-max="50">Sistemas de Ponto e Acesso
+                            (Secullum)</h4>
+                        <p data-edit-key="services.item4Desc" data-edit-max="160">Instalação, treinamento e suporte
+                            em softwares para gestão de ponto e controle de acesso, otimizando o RH da sua empresa.
+                        </p>
+                        <a href="servicos.html"><span data-edit-key="services.item4Link" data-edit-max="20">saiba
+                                mais</span> <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
 
                 <div class="service-item animate-fade-left delay-1">
                     <i class="fas fa-cogs service-icon"></i>
                     <div class="service-text">
-                        <h4>Peças e Acessórios</h4>
-                        <p>Fornecemos bobinas térmicas, cartões de proximidade, peças de reposição e todos os acessórios
-                            necessários para seus equipamentos.</p>
-                        <a href="produtos-geral.html?filtro=pecas">ver mais <i class="fas fa-chevron-right"></i></a>
+                        <h4 data-edit-key="services.item5Title" data-edit-max="50">Peças e Acessórios</h4>
+                        <p data-edit-key="services.item5Desc" data-edit-max="170">Fornecemos bobinas térmicas, cartões
+                            de proximidade, peças de reposição e todos os acessórios necessários para seus
+                            equipamentos.</p>
+                        <a href="produtos-geral.html?filtro=pecas"><span data-edit-key="services.item5Link"
+                                data-edit-max="20">ver mais</span> <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
 
                 <div class="service-item animate-fade-left delay-2">
                     <i class="fas fa-users service-icon"></i>
                     <div class="service-text">
-                        <h4>Atendimento a Clientes Henry</h4>
-                        <p>Somos autorizados para execução de serviços em toda a linha de produtos Henry, garantindo a
-                            longevidade do seu investimento.</p>
-                        <a href="servicos.html">suporte <i class="fas fa-chevron-right"></i></a>
+                        <h4 data-edit-key="services.item6Title" data-edit-max="50">Atendimento a Clientes Henry</h4>
+                        <p data-edit-key="services.item6Desc" data-edit-max="160">Somos autorizados para execução de
+                            serviços em toda a linha de produtos Henry, garantindo a longevidade do seu investimento.
+                        </p>
+                        <a href="servicos.html"><span data-edit-key="services.item6Link"
+                                data-edit-max="20">suporte</span> <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -171,10 +161,12 @@
 
 
             <div class="contact-info animate-fade-left">
-                <h2>Fale conosco</h2>
-                <p>Nossa equipe está pronta para te atender e oferecer a melhor solução em controle de ponto, acesso ou
-                    balanças comerciais para o seu negócio.</p>
-                <p>Se preferir, entre em contato diretamente pelos nossos canais de vendas:</p>
+                <h2 data-edit-key="contact.title" data-edit-max="40">Fale conosco</h2>
+                <p data-edit-key="contact.intro1" data-edit-max="200">Nossa equipe está pronta para te atender e
+                    oferecer a melhor solução em controle de ponto, acesso ou balanças comerciais para o seu negócio.
+                </p>
+                <p data-edit-key="contact.intro2" data-edit-max="100">Se preferir, entre em contato diretamente pelos
+                    nossos canais de vendas:</p>
 
                 <p class="contact-item">
                     <i class="fas fa-phone-alt"></i> (45) 3264-3176
@@ -208,6 +200,8 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/editable-content.js"></script>
 </body>
 
 </html>

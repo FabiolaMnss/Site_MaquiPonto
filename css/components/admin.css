@@ -1,0 +1,783 @@
+/* ======================================= */
+/* ====== PAINEL DE EDIÇÃO (ADMIN) ====== */
+/* ======================================= */
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Excluir categoria no filtro --- */
+.admin-category-delete {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 11px;
+    cursor: pointer;
+    padding: 2px 4px;
+    margin-left: auto;
+    transition: color 0.2s ease;
+}
+
+.admin-category-delete:hover {
+    color: #c0392b;
+}
+
+/* --- Botão flutuante de acesso --- */
+.admin-panel {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 1000;
+}
+
+/* Versão dentro do header (menu superior) */
+.admin-panel-header {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-left: 16px;
+}
+
+.admin-panel-header .admin-toggle-btn {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.admin-panel-header .admin-login-box {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    left: auto;
+    bottom: auto;
+}
+
+@media (max-width: 992px) {
+    .admin-panel-header {
+        margin-left: 0;
+    }
+}
+
+/* A barra de "Modo edição" flutua fixa na tela, acompanhando o scroll -
+   assim dá pra salvar/cancelar mesmo editando lá embaixo na página */
+.admin-bar {
+    position: fixed;
+    top: 22px;
+    right: 25px;
+    z-index: 100000;
+    animation: admin-bar-drop 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes admin-bar-drop {
+    from {
+        opacity: 0;
+        transform: translateY(-14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-bar {
+        top: auto;
+        bottom: 20px;
+        right: 15px;
+        left: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.admin-toggle-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: #172739;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.admin-toggle-btn:hover {
+    color: #f7ce16;
+}
+
+.admin-login-box {
+    position: absolute;
+    bottom: 58px;
+    left: 0;
+    background: #fff;
+    border-radius: 22px;
+    padding: 30px 26px 26px;
+    width: 300px;
+    box-shadow: 0 30px 70px rgba(15, 23, 42, 0.22), 0 4px 12px rgba(15, 23, 42, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow: hidden;
+}
+
+/* Faixa decorativa no topo do modal */
+.admin-login-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #172739, #3a4a63 50%, #f7ce16);
+}
+
+.admin-login-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.admin-login-icon-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1d2f47, #33455f);
+    flex-shrink: 0;
+}
+
+.admin-login-icon {
+    color: #f7ce16;
+    font-size: 13px;
+}
+
+.admin-login-header h4 {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    color: #1e2733;
+    margin: 0;
+}
+
+.admin-login-subtitle {
+    text-align: center;
+    font-size: 12px;
+    color: #a9afb8;
+    margin: -8px 0 4px;
+}
+
+.admin-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.admin-input-icon {
+    position: absolute;
+    left: 15px;
+    color: #9aa3b0;
+    font-size: 13.5px;
+    pointer-events: none;
+    transition: color 0.25s ease;
+}
+
+.admin-input-wrapper:focus-within .admin-input-icon {
+    color: #33455f;
+}
+
+.admin-login-box input {
+    width: 100%;
+    padding: 14px 40px 14px 40px;
+    border: 1.5px solid transparent;
+    border-radius: 12px;
+    font-size: 13.5px;
+    font-family: inherit;
+    color: #263042;
+    background: #f4f5f7;
+    transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.admin-login-box input::placeholder {
+    color: #a9afb8;
+}
+
+.admin-login-box input:focus {
+    outline: none;
+    border-color: #33455f;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(51, 69, 95, 0.1);
+}
+
+/* Remove o "olho" nativo do navegador (Edge/Chromium) pra não duplicar
+   com o nosso botão de mostrar/ocultar senha */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+.admin-toggle-password {
+    position: absolute;
+    right: 13px;
+    background: none;
+    border: none;
+    color: #9aa3b0;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s ease;
+}
+
+.admin-toggle-password:hover {
+    color: #33455f;
+}
+
+.admin-login-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #1d2f47, #172739);
+    color: #fff;
+    border: none;
+    padding: 13px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.25s ease;
+    margin-top: 6px;
+    box-shadow: 0 8px 18px rgba(23, 39, 57, 0.25);
+}
+
+.admin-login-submit i {
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+.admin-login-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(23, 39, 57, 0.32);
+}
+
+.admin-login-submit:hover i {
+    transform: translateX(3px);
+}
+
+.admin-login-error {
+    color: #c0392b;
+    font-size: 11.5px;
+    text-align: center;
+    margin: 0;
+    min-height: 14px;
+}
+
+.admin-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #172739;
+    padding: 8px 10px 8px 16px;
+    border-radius: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.28), 0 2px 8px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+}
+
+.admin-bar-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #f7ce16;
+    font-size: 12.5px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.admin-bar-status i {
+    font-size: 11px;
+}
+
+.admin-bar-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.admin-bar-btn:active {
+    transform: scale(0.96);
+}
+
+.admin-bar-btn i {
+    font-size: 11px;
+}
+
+.admin-bar-btn-save {
+    background: #f7ce16;
+    color: #172739;
+}
+
+.admin-bar-btn-save:hover {
+    background: #ffdc4d;
+}
+
+.admin-bar-btn-cancel {
+    background: rgba(255, 128, 128, 0.15);
+    color: #ff9d9d;
+}
+
+.admin-bar-btn-cancel:hover {
+    background: rgba(255, 128, 128, 0.28);
+    color: #ffb8b8;
+}
+
+.admin-bar-btn-exit {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.admin-bar-btn-exit:hover {
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+}
+
+.admin-bar-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+    transform: none;
+}
+
+/* --- Aviso central "Salvo!" --- */
+/* Contêiner fixo cobrindo a tela inteira, centralizando o aviso via
+   flexbox - imune a qualquer bug de %/vw/scroll/containing-block */
+.admin-toast-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    pointer-events: none;
+}
+
+.admin-toast {
+    background: #172739;
+    color: #fff;
+    padding: 16px 28px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* Só aparece/desaparece com fade - nenhum movimento de posição */
+.admin-toast.is-visible {
+    opacity: 1;
+}
+
+.admin-toast i {
+    color: #6fcf97;
+    font-size: 17px;
+}
+
+.admin-toast.is-error i {
+    color: #ff8080;
+}
+
+/* --- Modal customizado (substitui prompt() do navegador) --- */
+.admin-prompt-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 15, 23, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999998;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.admin-prompt-overlay.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.admin-prompt-box {
+    background: #fff;
+    border-radius: 18px;
+    padding: 26px 26px 22px;
+    width: 320px;
+    max-width: 90vw;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
+    transform: translateY(10px) scale(0.97);
+    transition: transform 0.2s ease;
+}
+
+.admin-prompt-overlay.is-visible .admin-prompt-box {
+    transform: translateY(0) scale(1);
+}
+
+.admin-prompt-title {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #1e2733;
+    margin: 0 0 14px;
+    text-align: center;
+}
+
+.admin-prompt-input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1.5px solid #e4e7ec;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-family: inherit;
+    color: #263042;
+    background: #f4f5f7;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.admin-prompt-input::placeholder {
+    color: #a9afb8;
+}
+
+.admin-prompt-input:focus {
+    outline: none;
+    border-color: #33455f;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(51, 69, 95, 0.1);
+}
+
+.admin-prompt-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.admin-prompt-actions button {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.admin-prompt-cancel {
+    background: #f0f1f3;
+    color: #555;
+}
+
+.admin-prompt-cancel:hover {
+    background: #e4e6e9;
+}
+
+.admin-prompt-confirm {
+    background: #172739;
+    color: #fff;
+}
+
+.admin-prompt-confirm:hover {
+    background: #24334a;
+}
+
+.admin-prompt-confirm-danger {
+    background: #c0392b;
+}
+
+.admin-prompt-confirm-danger:hover {
+    background: #a93226;
+}
+
+/* --- Modal de confirmação (variação do prompt, sem campo de texto) --- */
+.admin-confirm-box {
+    text-align: center;
+}
+
+.admin-confirm-icon {
+    display: block;
+    font-size: 28px;
+    color: #f0b429;
+    margin-bottom: 12px;
+}
+
+.admin-confirm-message {
+    font-size: 13.5px;
+    color: #2c3644;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- Campos editáveis dentro do card --- */
+.admin-editable {
+    outline: 1px dashed transparent;
+    border-radius: 4px;
+    transition: outline-color 0.2s, background-color 0.2s;
+    cursor: text;
+}
+
+.admin-editable:hover,
+.admin-editable:focus {
+    outline-color: #f7ce16;
+    background: rgba(247, 206, 22, 0.06);
+}
+
+/* Indica que o campo tem alteração ainda não salva */
+.admin-dirty {
+    outline: 1px dashed #e67e22 !important;
+    background: rgba(230, 126, 34, 0.08) !important;
+    position: relative;
+}
+
+.admin-dirty::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e67e22;
+    box-shadow: 0 0 0 2px #fff;
+}
+
+/* Campo de texto com aparência de caixa sempre visível (não só no hover),
+   deixa claro que dá pra escrever ali mesmo sem precisar passar o mouse */
+.admin-field-box {
+    display: block;
+    border: 1.5px dashed #d8b400;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background: rgba(247, 206, 22, 0.05);
+    min-height: 20px;
+}
+
+.admin-field-box:hover,
+.admin-field-box:focus {
+    border-style: solid;
+    background: rgba(247, 206, 22, 0.1);
+}
+
+.admin-char-counter {
+    display: block;
+    font-size: 10px;
+    color: #aaa;
+    text-align: right;
+    margin: 2px 0 6px;
+}
+
+/* --- Seletor de categoria/tecnologia --- */
+.admin-select-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.admin-inline-select {
+    flex: 1;
+    font-size: 11px;
+    padding: 5px 6px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    color: #444;
+}
+
+/* --- Trocar foto --- */
+.admin-photo-overlay {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 34px;
+    height: 34px;
+    background: rgba(23, 39, 57, 0.85);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    z-index: 5;
+}
+
+.admin-photo-overlay:hover {
+    background: #f7ce16;
+    color: #172739;
+}
+
+/* --- Imagens editáveis fora do catálogo (ex: página Quem Somos) --- */
+.admin-image-wrapper {
+    position: relative;
+    display: block;
+}
+
+.admin-image-edit-overlay {
+    bottom: 14px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.admin-dirty-image {
+    outline: 3px dashed #e67e22;
+    outline-offset: 3px;
+}
+
+/* --- Arrastar para reordenar --- */
+.admin-drag-handle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: grab;
+    z-index: 5;
+    transition: background-color 0.2s ease;
+}
+
+.admin-drag-handle:hover {
+    background: #172739;
+}
+
+.admin-drag-handle:active {
+    cursor: grabbing;
+}
+
+/* O card "descolado", seguindo o mouse/dedo */
+.product-card.is-dragging-floating {
+    z-index: 9999;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    transform: rotate(-2deg) scale(1.03);
+    cursor: grabbing;
+    pointer-events: none;
+    transition: none !important;
+}
+
+/* Marca o lugar onde o card vai cair */
+.product-card-placeholder {
+    border: 2px dashed #f7ce16;
+    border-radius: 15px;
+    background: rgba(247, 206, 22, 0.06);
+}
+
+/* Evita selecionar texto/rolagem estranha durante o arraste */
+body.is-reordering {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* --- Placeholder de "sem foto" pra produto novo --- */
+.product-img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    color: #bbb;
+}
+
+.product-img-placeholder i {
+    font-size: 28px;
+}
+
+.product-img-placeholder span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Card precisa de position:relative para os botões flutuantes (foto/excluir) */
+.product-card {
+    position: relative;
+}
+
+/* --- Excluir produto --- */
+.admin-delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.admin-delete-btn:hover {
+    background: #c0392b;
+}
+
+/* --- Adicionar novo produto --- */
+.admin-add-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: transparent;
+    border: 2px dashed #ccc;
+    border-radius: 15px;
+    color: #999;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    min-height: 200px;
+    transition: 0.3s;
+}
+
+.admin-add-card:hover {
+    border-color: #f7ce16;
+    color: #172739;
+}
+
+@media (max-width: 600px) {
+    .admin-panel {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .admin-login-box {
+        width: 250px;
+        padding: 22px 18px 18px;
+    }
+}

@@ -115,6 +115,129 @@ body {
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* --- DESTAQUES DE SUPORTE TÉCNICO --- */
+.feature-highlights-section {
+    padding: 90px 0;
+    background: #ffffff;
+}
+
+.feature-title {
+    text-align: center;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 800;
+    color: var(--secondary-color);
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.3;
+}
+
+.feature-title .highlight {
+    color: var(--primary-color);
+}
+
+.feature-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 70px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #eee;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 130px;
+    text-align: center;
+}
+
+.feature-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 2px solid #e5e5e5;
+    color: #bbb;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.feature-item span {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.feature-item.is-active .feature-icon {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.feature-item:hover .feature-icon {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.feature-item.is-active:hover .feature-icon {
+    color: var(--secondary-color);
+}
+
+.feature-checklist-grid {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.checklist-column {
+    flex: 1;
+}
+
+.checklist-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+.checklist-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 22px;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.checklist-list li strong {
+    color: var(--secondary-color);
+}
+
+.checklist-list li i {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.checklist-image {
+    flex: 1;
+}
+
+.checklist-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
 /* --- INTRODUÇÃO --- */
 .servicos-section {
     padding: 80px 0;
@@ -304,6 +427,15 @@ body {
         height: 40px;
         right: 20px;
     }
+
+    .feature-checklist-grid {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .feature-row {
+        gap: 30px 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -315,6 +447,39 @@ body {
     .service-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
+    }
+
+    .feature-highlights-section {
+        padding: 60px 0;
+    }
+
+    .feature-title {
+        margin-bottom: 35px;
+    }
+
+    .feature-row {
+        gap: 24px 16px;
+        margin-bottom: 45px;
+        padding-bottom: 35px;
+    }
+
+    .feature-item {
+        width: 90px;
+    }
+
+    .feature-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 18px;
+    }
+
+    .feature-item span {
+        font-size: 12px;
+    }
+
+    .checklist-list li {
+        font-size: 14px;
+        margin-bottom: 18px;
     }
 
     /* Cards mais compactos no Mobile */

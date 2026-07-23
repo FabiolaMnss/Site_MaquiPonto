@@ -12,35 +12,12 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/quemsomos.css">
+    <link rel="stylesheet" href="css/components/admin.css">
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="container nav-content">
-            <div class="logo">MAQUI <span class="logo-text">PONTO</span></div>
-
-            <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <nav class="nav">
-                <a href="index.html">INÍCIO</a>
-                <a href="quemsomos.html" class="active">QUEM SOMOS</a>
-                <a href="produtos-geral.html">PRODUTOS</a>
-                <a href="servicos.html">SERVIÇOS</a>
-                <a href="localizacao.html">LOCALIZAÇÃO</a>
-                <a href="index.html#contato">CONTATO</a>
-            </nav>
-
-            <a href="https://wa.me/5545998608682?text=Olá! Estava visitando o site da Maquiponto e gostaria de falar com um responsável."
-                class="btn-primary header-cta" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i> SOLICITE UM ORÇAMENTO
-            </a>
-        </div>
-    </header>
+    <div id="site-header"></div>
 
     <main>
         <section class="modern-hero">
@@ -48,16 +25,20 @@
                 <div class="hero-layout">
 
                     <div class="hero-wrapper">
-                        <span class="breadcrumb-top">SOBRE NÓS</span>
-                        <h1 class="modern-title animate-fade">Uma trajetória de <br><span>Confiança e União</span></h1>
+                        <span class="breadcrumb-top" data-edit-key="hero.eyebrow" data-edit-max="20">SOBRE NÓS</span>
+                        <h1 class="modern-title animate-fade">
+                            <span data-edit-key="hero.titleLine1" data-edit-max="30">Uma trajetória de</span> <br>
+                            <span data-edit-key="hero.titleLine2" data-edit-max="30">Confiança e União</span>
+                        </h1>
                         <div class="title-divider"></div>
-                        <p class="hero-description">Conheça a história por trás da Maquiponto e nossa dedicação à
-                            excelência em soluções de ponto e acesso.</p>
+                        <p class="hero-description" data-edit-key="hero.description" data-edit-max="180">Conheça a
+                            história por trás da Maquiponto e nossa dedicação à excelência em soluções de ponto e
+                            acesso.</p>
                     </div>
 
                     <div class="hero-image-side animate-fade-right">
                         <img src="img/logo_maquiponto.jpeg" alt="Logo Maquiponto"
-                            class="img-responsive hero-img-frame">
+                            class="img-responsive hero-img-frame" data-edit-key="hero.image">
                     </div>
 
                 </div>
@@ -67,17 +48,19 @@
         <section class="about-section">
             <div class="container about-content">
                 <div class="about-text animate-fade-left">
-                    <h2 class="section-heading">Uma Empresa de Família</h2>
-                    <p>A Maquiponto é movida pela união e experiência de gerações. Gerida por <strong>Bertolino Nunes
-                            (pai)</strong> e <strong>Eduardo Agostinho Nunes (filho)</strong>, a empresa carrega em seu
-                        DNA o
-                        compromisso com a honestidade e a continuidade de um trabalho sério.</p>
-                    <p>Acreditamos que a confiança que nossos clientes depositam em nós é reflexo dos valores familiares
-                        que aplicamos no dia a dia: respeito, tradição e inovação tecnológica constante.</p>
+                    <h2 class="section-heading" data-edit-key="family.title" data-edit-max="40">Uma Empresa de
+                        Família</h2>
+                    <p data-edit-key="family.text1" data-edit-max="320">A Maquiponto é movida pela união e
+                        experiência de gerações. Gerida por Bertolino Nunes (pai) e Eduardo Agostinho Nunes (filho), a
+                        empresa carrega em seu DNA o compromisso com a honestidade e a continuidade de um trabalho
+                        sério.</p>
+                    <p data-edit-key="family.text2" data-edit-max="240">Acreditamos que a confiança que nossos
+                        clientes depositam em nós é reflexo dos valores familiares que aplicamos no dia a dia:
+                        respeito, tradição e inovação tecnológica constante.</p>
                 </div>
                 <div class="about-image animate-fade-right">
                     <img src="img/familia-maquiponto.jpeg" alt="Bertolino e Eduardo Nunes"
-                        class="img-responsive main-frame">
+                        class="img-responsive main-frame" data-edit-key="family.image">
                 </div>
             </div>
         </section>
@@ -85,17 +68,21 @@
         <section class="about-section background-light">
             <div class="container about-content reverse-mobile">
                 <div class="about-image animate-fade-left">
-                    <img src="img/imagem_quemsomos2.jpeg" alt="Equipe Maquiponto" class="img-responsive main-frame">
+                    <img src="img/imagem_quemsomos2.jpeg" alt="Equipe Maquiponto" class="img-responsive main-frame"
+                        data-edit-key="history.image">
                 </div>
                 <div class="about-text animate-fade-right">
-                    <h2 class="section-heading">Nossa História e Credibilidade</h2>
-                    <p><strong>Desde 2010, somos parceiros autorizados Henry e Secullum</strong>, líderes em soluções de
-                        Controle de Ponto e Acesso no Brasil. Nossa jornada é marcada pela dedicação em oferecer
-                        tecnologia de ponta e um serviço especializado.</p>
-                    <p>A Maquiponto nasceu com o objetivo de simplificar a gestão empresarial, garantindo que nossos
-                        clientes estejam sempre em conformidade com a legislação vigente.</p>
+                    <h2 class="section-heading" data-edit-key="history.title" data-edit-max="50">Nossa História e
+                        Credibilidade</h2>
+                    <p data-edit-key="history.text1" data-edit-max="320">Desde 2010, somos parceiros autorizados
+                        Henry e Secullum, líderes em soluções de Controle de Ponto e Acesso no Brasil. Nossa jornada é
+                        marcada pela dedicação em oferecer tecnologia de ponta e um serviço especializado.</p>
+                    <p data-edit-key="history.text2" data-edit-max="240">A Maquiponto nasceu com o objetivo de
+                        simplificar a gestão empresarial, garantindo que nossos clientes estejam sempre em
+                        conformidade com a legislação vigente.</p>
                     <a href="https://wa.me/5545998608682?text=Olá! Estava lendo sobre a história da Maquiponto e gostaria de falar com um consultor."
-                        class="btn-modern" target="_blank">FALE COM UM CONSULTOR</a>
+                        class="btn-modern" target="_blank" data-edit-key="history.cta" data-edit-max="30">FALE COM UM
+                        CONSULTOR</a>
                 </div>
             </div>
         </section>
@@ -103,15 +90,18 @@
         <section class="about-section">
             <div class="container about-content">
                 <div class="about-text animate-fade-left">
-                    <h2 class="section-heading">Suporte Especializado e INMETRO</h2>
-                    <p>Somos credenciados pelo <strong>INMETRO</strong> para serviços em balanças e autorizados Henry,
-                        garantindo que todo o processo de manutenção seja realizado com excelência técnica.</p>
-                    <p>Oferecemos suporte total na instalação, treinamento e configuração de sistemas, otimizando a
-                        gestão de RH e a produtividade da sua empresa com segurança jurídica.</p>
+                    <h2 class="section-heading" data-edit-key="support.title" data-edit-max="50">Suporte
+                        Especializado e INMETRO</h2>
+                    <p data-edit-key="support.text1" data-edit-max="240">Somos credenciados pelo INMETRO para
+                        serviços em balanças e autorizados Henry, garantindo que todo o processo de manutenção seja
+                        realizado com excelência técnica.</p>
+                    <p data-edit-key="support.text2" data-edit-max="220">Oferecemos suporte total na instalação,
+                        treinamento e configuração de sistemas, otimizando a gestão de RH e a produtividade da sua
+                        empresa com segurança jurídica.</p>
                 </div>
                 <div class="about-image animate-fade-right">
-                    <img src="img/imagem_quemsomos1.jpeg" alt="Técnicos Maquiponto"
-                        class="img-responsive main-frame">
+                    <img src="img/imagem_quemsomos1.jpeg" alt="Técnicos Maquiponto" class="img-responsive main-frame"
+                        data-edit-key="support.image">
                 </div>
             </div>
         </section>
@@ -119,8 +109,9 @@
         <section class="about-mvv">
             <div class="container">
                 <div class="mvv-header">
-                    <span class="breadcrumb-top">DIRETRIZES</span>
-                    <h2 class="section-title text-light">Nossa Cultura Organizacional</h2>
+                    <span class="breadcrumb-top" data-edit-key="mvv.eyebrow" data-edit-max="20">DIRETRIZES</span>
+                    <h2 class="section-title text-light" data-edit-key="mvv.title" data-edit-max="40">Nossa Cultura
+                        Organizacional</h2>
                 </div>
 
                 <div class="mvv-grid">
@@ -128,29 +119,34 @@
                         <div class="mvv-icon-wrapper">
                             <i class="fas fa-bullseye"></i>
                         </div>
-                        <h3>MISSÃO</h3>
-                        <p>Fornecer soluções completas e confiáveis em controle de ponto e balanças, garantindo
-                            conformidade legal e tranquilidade para o empresário.</p>
+                        <h3 data-edit-key="mvv.missionTitle" data-edit-max="20">MISSÃO</h3>
+                        <p data-edit-key="mvv.missionText" data-edit-max="160">Fornecer soluções completas e
+                            confiáveis em controle de ponto e balanças, garantindo conformidade legal e
+                            tranquilidade para o empresário.</p>
                     </div>
 
                     <div class="mvv-item active-card">
                         <div class="mvv-icon-wrapper">
                             <i class="fas fa-eye"></i>
                         </div>
-                        <h3>VISÃO</h3>
-                        <p>Ser reconhecida como a principal parceira tecnológica no segmento, sinônimo de credibilidade
-                            absoluta e suporte técnico de excelência.</p>
+                        <h3 data-edit-key="mvv.visionTitle" data-edit-max="20">VISÃO</h3>
+                        <p data-edit-key="mvv.visionText" data-edit-max="160">Ser reconhecida como a principal
+                            parceira tecnológica no segmento, sinônimo de credibilidade absoluta e suporte técnico de
+                            excelência.</p>
                     </div>
 
                     <div class="mvv-item">
                         <div class="mvv-icon-wrapper">
                             <i class="fas fa-hands-helping"></i>
                         </div>
-                        <h3>VALORES</h3>
+                        <h3 data-edit-key="mvv.valuesTitle" data-edit-max="20">VALORES</h3>
                         <ul class="value-modern-list">
-                            <li><span>01</span> Credibilidade</li>
-                            <li><span>02</span> Excelência</li>
-                            <li><span>03</span> Comprometimento</li>
+                            <li><span>01</span> <span data-edit-key="mvv.value1"
+                                    data-edit-max="30">Credibilidade</span></li>
+                            <li><span>02</span> <span data-edit-key="mvv.value2"
+                                    data-edit-max="30">Excelência</span></li>
+                            <li><span>03</span> <span data-edit-key="mvv.value3"
+                                    data-edit-max="30">Comprometimento</span></li>
                         </ul>
                     </div>
                 </div>
@@ -169,6 +165,8 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/editable-content.js"></script>
 </body>
 
 </html>
